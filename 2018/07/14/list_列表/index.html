@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>lovely boy&#39;s blog</title>
+  <title>python list的创建 | lovely boy&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="lovely boy&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. list-">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python list的创建">
+<meta property="og:url" content="http://yoursite.com/2018/07/14/list_列表/index.html">
 <meta property="og:site_name" content="lovely boy&#39;s blog">
+<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. list-">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-07-14T08:37:18.230Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="lovely boy&#39;s blog">
+<meta name="twitter:title" content="python list的创建">
+<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. list-">
   
     <link rel="alternative" href="/atom.xml" title="lovely boy&#39;s blog" type="application/atom+xml">
   
@@ -156,161 +160,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-list_函数" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-list_列表" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/14/list_函数/">python list的函数</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/14/list_函数/" class="archive-article-date">
-  	<time datetime="2018-07-14T09:22:03.293Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h3 id="clear"><a href="#clear" class="headerlink" title="clear()"></a>clear()</h3><p>将列表中的内容进行清空，原列表内容为空。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; list1 = [1,2,3,4,5,6]</span><br><span class="line">&gt;&gt;&gt; list1.clear()</span><br><span class="line">&gt;&gt;&gt; list1</span><br><span class="line">[]</span><br></pre></td></tr></table></figure></p>
-<h3 id="max-与min"><a href="#max-与min" class="headerlink" title="max()与min()"></a>max()与min()</h3><p>返回值：返回该列表中最大值或最小值。<br>注意：该函数在使用时，必须要求所统计的列表中元素的数据类型要一致。不支持多数据类型，数值型根据数值本身大小取值，字符串类型根据字母的ASCII码值取值，布尔值根据对应的1、0取值。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; list2 = [8,5,7,1,6,9]</span><br><span class="line">&gt;&gt;&gt; max(list2)</span><br><span class="line">9</span><br><span class="line">&gt;&gt;&gt; min(list2)</span><br><span class="line">1</span><br></pre></td></tr></table></figure></p>
-<h3 id="sum-求和函数"><a href="#sum-求和函数" class="headerlink" title="sum()求和函数"></a>sum()求和函数</h3><p>函数格式：sum(list)<br>返回值：将列表中所用的数值进行求和运算，返回结果。注意，该函数只能用于数值型列表。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; list3 = [1,6,7,5,9]</span><br><span class="line">&gt;&gt;&gt; sum(list3)</span><br><span class="line">28</span><br></pre></td></tr></table></figure></p>
-<h3 id="sort-排序"><a href="#sort-排序" class="headerlink" title="sort()排序"></a>sort()排序</h3><p>函数格式：list.sort()、list.sort(reverse=True)<br>返回值：默认情况下，将原列表中元素按照升序进行排序,如果设置了反转参数为True，那么将原列表中的元素按照降序排列。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; list4 = [5,2,8,3,9,4]</span><br><span class="line">&gt;&gt;&gt; list4.sort()</span><br><span class="line">&gt;&gt;&gt; list4</span><br><span class="line">[2, 3, 4, 5, 8, 9]</span><br><span class="line">&gt;&gt;&gt; list4.sort(reverse = True)</span><br><span class="line">&gt;&gt;&gt; list4</span><br><span class="line">[9, 8, 5, 4, 3, 2]</span><br></pre></td></tr></table></figure></p>
-<h3 id="sorted-排序"><a href="#sorted-排序" class="headerlink" title="sorted()排序"></a>sorted()排序</h3><p>函数格式：sorted(list)、sorted(list,reverse=True)<br>返回值：默认情况下，将原列表中元素按照升序进行排序,如果设置了反转参数为True，那么将原列表中的元素按照降序排列。<br>注意：上面两种排序函数，其中第一个属于列表自身的排序方法，而第二种属于python内置的排序方法，也就是说第二种可以应用在包括列表在内多种集合排序。</p>
-<h3 id="set-去除列表中重复的元素"><a href="#set-去除列表中重复的元素" class="headerlink" title="set() 去除列表中重复的元素"></a>set() 去除列表中重复的元素</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; list5 = [1,1,2,2,3,4,5,5]</span><br><span class="line">&gt;&gt;&gt; list5 = list(<span class="built_in">set</span>(list5))</span><br><span class="line">&gt;&gt;&gt; list5</span><br><span class="line">[1, 2, 3, 4, 5]</span><br></pre></td></tr></table></figure>
-<h3 id="count-计数函数"><a href="#count-计数函数" class="headerlink" title="count()计数函数"></a>count()计数函数</h3><p>函数格式：list.count(元素)<br>返回值：返回指定元素在列表中出现的次数<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; list6 = [1,1,2,2,3,4,5,5]</span><br><span class="line">&gt;&gt;&gt; list6.count(2)</span><br><span class="line">2</span><br></pre></td></tr></table></figure></p>
-<h3 id="常用数据类型的转换"><a href="#常用数据类型的转换" class="headerlink" title="常用数据类型的转换"></a>常用数据类型的转换</h3><p>字符串转为列表：list(str)<br>函数格式：list(str)<br>返回值：将指定的字符串，按照元素顺序逐一转为列表<br>string1 = ‘hello world’<br>list1 = list(string1)<br>拆分字符串：str.split(分隔符)<br>函数格式：str.split(分隔符)<br>返回值：将字符串，根据指定的分隔符，转换为列表<br>列表转为字符串：’分隔符’.join(list)<br>函数格式:’分隔符’.join(list)<br>返回值：将指定的列表中的元素，通过分隔符进行连接，转换为字符串</p>
-<h3 id="列表比较运算符操作"><a href="#列表比较运算符操作" class="headerlink" title="列表比较运算符操作"></a>列表比较运算符操作</h3><p>相当于列表使用普通的比较运算符<br>import operator<br>operator.ge()         大于等于   &gt;=<br>operator.gt()         大于       &gt;<br>operator.eq()       等于         ==<br>operator.ne()        不等于      !=<br>operator.le()           小于等于 &lt;=<br>operator.lt()          小于      &lt;<br>格式：operator.ge(列表1,列表2)<br>返回值：如果符合条件，返回True，反之，返回False</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/14/list_函数/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-list的增删改" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/14/list的增删改/">Python list中元素的操作</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/14/list的增删改/" class="archive-article-date">
-  	<time datetime="2018-07-14T08:37:22.951Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="增加元素"><a href="#增加元素" class="headerlink" title="增加元素"></a>增加元素</h2><h3 id="使用append-函数在列表尾部增加一个元素"><a href="#使用append-函数在列表尾部增加一个元素" class="headerlink" title="使用append()函数在列表尾部增加一个元素"></a>使用append()函数在列表尾部增加一个元素</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; list1 = [1,2,3,4,5,6]</span><br><span class="line">&gt;&gt;&gt; list1.append(7)</span><br><span class="line">&gt;&gt;&gt; list1</span><br><span class="line">[1, 2, 3, 4, 5, 6, 7]</span><br></pre></td></tr></table></figure>
-<h3 id="使用extend-函数，在列表尾部，追加一个子列表内容"><a href="#使用extend-函数，在列表尾部，追加一个子列表内容" class="headerlink" title="使用extend()函数，在列表尾部，追加一个子列表内容"></a>使用extend()函数，在列表尾部，追加一个子列表内容</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; list2 = [8,9]</span><br><span class="line">&gt;&gt;&gt; list1.extend(list2)</span><br><span class="line">&gt;&gt;&gt; list1</span><br><span class="line">[1, 2, 3, 4, 5, 6, 7, 8, 9]</span><br></pre></td></tr></table></figure>
-<h3 id="使用“-”运算符，连接两个列表，其结果会生成一个新的列表。同时原来两个列表不变。"><a href="#使用“-”运算符，连接两个列表，其结果会生成一个新的列表。同时原来两个列表不变。" class="headerlink" title="使用“+”运算符，连接两个列表，其结果会生成一个新的列表。同时原来两个列表不变。"></a>使用“+”运算符，连接两个列表，其结果会生成一个新的列表。同时原来两个列表不变。</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; list3 = [1,2,3]</span><br><span class="line">&gt;&gt;&gt; list4 = [4,5,6]</span><br><span class="line">&gt;&gt;&gt; list3 + list4</span><br><span class="line">[1, 2, 3, 4, 5, 6]</span><br><span class="line">&gt;&gt;&gt; list3</span><br><span class="line">[1, 2, 3]</span><br><span class="line">&gt;&gt;&gt; list4</span><br><span class="line">[4, 5, 6]</span><br></pre></td></tr></table></figure>
-<h3 id="使用insert-函数，对列表指定位置进行插入操作。"><a href="#使用insert-函数，对列表指定位置进行插入操作。" class="headerlink" title="使用insert()函数，对列表指定位置进行插入操作。"></a>使用insert()函数，对列表指定位置进行插入操作。</h3><p>函数格式：list.insert(idx，元素),其中：idx代表要插入的索引位。返回值：列表长度+1<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; list5 = [1,2,4,5,6]</span><br><span class="line">&gt;&gt;&gt; list5.insert(2,3)</span><br><span class="line">&gt;&gt;&gt; list5</span><br><span class="line">[1, 2, 3, 4, 5, 6]</span><br></pre></td></tr></table></figure></p>
-<p>注意：插入指定的索引位后，原索引位所在的元素下标+1我们在实际使用的时候，通常会利用append或extend来实现元素的追加，而少用insert进行元素的插入。因为在频繁的插入操作，需要耗费大量的内存来维护列表的索引关系。</p>
-<h2 id="删除元素"><a href="#删除元素" class="headerlink" title="删除元素"></a>删除元素</h2><h3 id="使用remove-函数移除列表中指定的元素"><a href="#使用remove-函数移除列表中指定的元素" class="headerlink" title="使用remove()函数移除列表中指定的元素"></a>使用remove()函数移除列表中指定的元素</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; list6 = [1,2,3,4,5,6]</span><br><span class="line">&gt;&gt;&gt; list6.remove(3)</span><br><span class="line">&gt;&gt;&gt; list6</span><br><span class="line">[1, 2, 4, 5, 6]</span><br></pre></td></tr></table></figure>
-<h3 id="使用pop-函数移除元素"><a href="#使用pop-函数移除元素" class="headerlink" title="使用pop()函数移除元素"></a>使用pop()函数移除元素</h3><p>1）、list.pop() 默认从列表的尾部移除一个元素。并且返回所移除的元素。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; list7 = [1,2,3,4,5,6]</span><br><span class="line">&gt;&gt;&gt; list7.pop()</span><br><span class="line">6</span><br><span class="line">&gt;&gt;&gt; list7</span><br><span class="line">[1, 2, 3, 4, 5]</span><br></pre></td></tr></table></figure></p>
-<p>2）、list.pop(idx) idx指定的下表索引位置。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; list7</span><br><span class="line">[1, 2, 3, 4, 5]</span><br><span class="line">&gt;&gt;&gt; list7.pop(3)</span><br><span class="line">4</span><br><span class="line">&gt;&gt;&gt; list7</span><br><span class="line">[1, 2, 3, 5]</span><br></pre></td></tr></table></figure></p>
-<h3 id="使用del删除指定的列表片段或列表本身"><a href="#使用del删除指定的列表片段或列表本身" class="headerlink" title="使用del删除指定的列表片段或列表本身"></a>使用del删除指定的列表片段或列表本身</h3><p>del list[idx]        删除指定索引位对应的元素<br>del list             删除整个列表，同时释放该列表所占用的内存空间<br>del list[star:end]   删除指定的列表片段</p>
-<h2 id="修改元素"><a href="#修改元素" class="headerlink" title="修改元素"></a>修改元素</h2><h3 id="通过索引位，找到指定的列表元素，重新对其进行赋值即可完成修改操作。"><a href="#通过索引位，找到指定的列表元素，重新对其进行赋值即可完成修改操作。" class="headerlink" title="通过索引位，找到指定的列表元素，重新对其进行赋值即可完成修改操作。"></a>通过索引位，找到指定的列表元素，重新对其进行赋值即可完成修改操作。</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; list8 = [1,2,3,4]</span><br><span class="line">&gt;&gt;&gt; list8[3] = 5</span><br><span class="line">&gt;&gt;&gt; list8</span><br><span class="line">[1, 2, 3, 5]</span><br></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/14/list的增删改/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-list_列表" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/14/list_列表/">python list的创建</a>
+    <h1 class="article-title" itemprop="name">
+      python list的创建
     </h1>
   
 
@@ -334,6 +191,27 @@
       
 
       
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
     </div>
     <div class="article-info article-info-index">
       
@@ -341,16 +219,84 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/14/list_列表/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/07/14/list_列表/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2018/07/14/list的增删改/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Python list中元素的操作
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/07/14/python_if的用法/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Python if语句的用法</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -370,218 +316,14 @@
 
 
 
-
   
-    <article id="post-python_if的用法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/14/python_if的用法/">Python if语句的用法</a>
-    </h1>
   
 
-        
-        <a href="/2018/07/14/python_if的用法/" class="archive-article-date">
-  	<time datetime="2018-07-14T08:37:10.353Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h3 id="单判断"><a href="#单判断" class="headerlink" title="单判断"></a>单判断</h3><p>格式如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">if</span> 条件:</span><br><span class="line">      语句1</span><br></pre></td></tr></table></figure></p>
-<h3 id="双分支"><a href="#双分支" class="headerlink" title="双分支"></a>双分支</h3><p>格式如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">if</span> 条件:</span><br><span class="line">      语句1</span><br><span class="line">  <span class="keyword">else</span>:</span><br><span class="line">      语句2</span><br></pre></td></tr></table></figure></p>
-<h3 id="多分支"><a href="#多分支" class="headerlink" title="多分支"></a>多分支</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">if</span> 条件1:</span><br><span class="line">      语句1</span><br><span class="line">  <span class="keyword">elif</span> 条件2:</span><br><span class="line">      语句2</span><br><span class="line">  <span class="keyword">elif</span> 条件3:</span><br><span class="line">      语句3</span><br><span class="line">  ......</span><br><span class="line">  <span class="keyword">elif</span> 条件n:</span><br><span class="line">      语句n</span><br><span class="line">  <span class="keyword">else</span>:</span><br><span class="line">      语句e</span><br></pre></td></tr></table></figure>
-<h3 id="if语句的作用"><a href="#if语句的作用" class="headerlink" title="if语句的作用"></a>if语句的作用</h3><p>条件语句if，判断条件的真假选择要执行的语句。判断语句的结果为布尔类型，通常还会使用逻辑运算符： and、or、not<br>and:左右两端都是布尔型，其结果也为布尔型。当左右两端的值都为True，其结果才为True，有一方为False，其结果一定为False。<br>or:左右两端都是布尔型，其结果也为布尔型。当左右两端的值有一方为True时，其结果就为True，只有在双方都为False时，其结果才为False。<br>not：属于单目运算，其结果也是布尔型。其作用就是求反，如果变量为True，结果为False，如果为False，其结果为True。<br>逻辑运算、比较运算常用在条件中使用。同时，这两种运算符经常配合使用。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/14/python_if的用法/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-python_循环控制语句" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/12/python_循环控制语句/">Python 循环控制语句</a>
-    </h1>
   
 
-        
-        <a href="/2018/07/12/python_循环控制语句/" class="archive-article-date">
-  	<time datetime="2018-07-12T13:13:25.240Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h2><h3 id="第一种for循环"><a href="#第一种for循环" class="headerlink" title="第一种for循环"></a>第一种for循环</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">for</span> 变量 <span class="keyword">in</span> 集合：</span><br><span class="line">    代码</span><br></pre></td></tr></table></figure>
-<p>说明：这种循环方式，我们称为快速迭代循环，能够对集合数据进行遍历。<br>注意：这种方式只能用在集合数据上，比如：字符串、列表、元组、字典等内容。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">$ string1 = <span class="string">'hello world'</span></span><br><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> string1:</span><br><span class="line">	<span class="built_in">print</span>(item)</span><br><span class="line">h</span><br><span class="line">e</span><br><span class="line">l</span><br><span class="line">l</span><br><span class="line">o</span><br><span class="line"></span><br><span class="line">w</span><br><span class="line">o</span><br><span class="line">r</span><br><span class="line">l</span><br><span class="line">d</span><br></pre></td></tr></table></figure></p>
-<h3 id="第二种for循环"><a href="#第二种for循环" class="headerlink" title="第二种for循环"></a>第二种for循环</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">for</span> i range(循环次数):</span><br><span class="line">    代码</span><br></pre></td></tr></table></figure>
-<p>说明：这种循环方式，采用指定循环次数，对目标集合进行遍历。其做法主要是让循环与集合的下标同步，在循环次数时一同取出集合指定下标的对应值。<br>配合range()函数使用。通过range()函数指定了循环的范围。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$ range()函数：</span><br><span class="line">函数格式：</span><br><span class="line">range(stop) :缺省情况下，表示从0开始，循环n次</span><br><span class="line">range(star,stop[,step])</span><br><span class="line">其中，star：循环开始的值，stop：循环次数，step：循环步长。注意此处循环，会根据stop中的值循环规定的次数，但是显示时会从start位置开始。</span><br><span class="line">例如：</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(3,10):</span><br><span class="line">	<span class="built_in">print</span>(i,end=<span class="string">' '</span>)</span><br><span class="line">3 4 5 6 7 8 9 </span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(5,10):</span><br><span class="line">	<span class="built_in">print</span>(i,end=<span class="string">' '</span>)</span><br><span class="line">5 6 7 8 9</span><br></pre></td></tr></table></figure></p>
-<h3 id="for循环的嵌套"><a href="#for循环的嵌套" class="headerlink" title="for循环的嵌套"></a>for循环的嵌套</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">for</span> i <span class="keyword">in</span> range(次数):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> range(次数):</span><br><span class="line">        代码</span><br></pre></td></tr></table></figure>
-<p>注意：在这种嵌套表示的过程中，变量的位置尤为重要，通用原则为：如果变量的值需要通过外层循环来获取或生成，那么我们可以将其设为全局变量，即与外层循环for同等级的变量，如果变量需要在内层循环中生成或获取，我们通常会在外循环中声明，即与内循环同级。</p>
-<h2 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ 格式：<span class="keyword">while</span> 条件：</span><br><span class="line">           代码</span><br></pre></td></tr></table></figure>
-<p>break与continue<br>break：当满足指定条件时，break表示中断（中止）此循环，如果循环外部还有其他代码则继续向下执行。<br>continue：当满足指定条件时，continue表示结束本次循环，开始下一次循环。注意continue并没有退出循环。<br>同时，这两个关键字都是必须配合循环语句来使用，不能单独用在其他地方。比如不能用于单独的if语句中。</p>
-<h2 id="while-for的区别"><a href="#while-for的区别" class="headerlink" title="while-for的区别"></a>while-for的区别</h2><p>for循环和while循环，两者的相同点在于都能循环做一件重复的事情；不同点在于，for循环是在序列穷尽时停止，while循环是在条件不成立时停止。<br>根据for和while的区别,简单的循环和嵌套循环时使用for循环更为方便，需要使用无限循环时则只能使用while循环。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/12/python_循环控制语句/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/10/hello-world/">Hello World</a>
-    </h1>
   
 
-        
-        <a href="/2018/07/10/hello-world/" class="archive-article-date">
-  	<time datetime="2018-07-10T13:10:55.565Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/10/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
 
 
@@ -604,8 +346,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
