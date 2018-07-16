@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2018/7 | lovely boy&#39;s blog</title>
+  <title>python 处理字符串的方法 | lovely boy&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="lovely boy&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/archives/2018/07/index.html">
+  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. eval(">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python 处理字符串的方法">
+<meta property="og:url" content="http://yoursite.com/2018/07/16/python_字符串的处理/index.html">
 <meta property="og:site_name" content="lovely boy&#39;s blog">
+<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. eval(">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-07-16T03:44:52.007Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="lovely boy&#39;s blog">
+<meta name="twitter:title" content="python 处理字符串的方法">
+<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. eval(">
   
     <link rel="alternative" href="/atom.xml" title="lovely boy&#39;s blog" type="application/atom+xml">
   
@@ -156,211 +160,168 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-python_字符串的处理" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      python 处理字符串的方法
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/16/python_字符串的处理/" class="archive-article-date">
+
+        
+        <a href="/2018/07/16/python_字符串的处理/" class="archive-article-date">
   	<time datetime="2018-07-16T03:44:52.185Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-16</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/16/python_字符串的处理/">python 处理字符串的方法</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h3 id="eval-str"><a href="#eval-str" class="headerlink" title="eval(str)"></a>eval(str)</h3><p>功能：将字符串str当成有效的表达式来求值并返回结果，生成一个新的字符串。<br>注意：字符串只能是纯数值型。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; <span class="built_in">eval</span>(<span class="string">"12+3"</span>)</span><br><span class="line">15</span><br></pre></td></tr></table></figure></p>
+<h3 id="str-lower"><a href="#str-lower" class="headerlink" title="str.lower()"></a>str.lower()</h3><p>功能：转换字符串中的大写字母为小写字母，生成一个新的字符串。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; str1 = <span class="string">"SDR dsad Sfds"</span></span><br><span class="line">&gt;&gt;&gt; str1.lower()</span><br><span class="line"><span class="string">'sdr dsad sfds'</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="str-upper"><a href="#str-upper" class="headerlink" title="str.upper()"></a>str.upper()</h3><p>功能：转换字符串中的小写字母为大写字母，生成一个新的字符串。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; str3 = <span class="string">"SDR dsad Sfds"</span></span><br><span class="line">&gt;&gt;&gt; str3.upper()</span><br><span class="line"><span class="string">'SDR DSAD SFDS'</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="str-swapcase"><a href="#str-swapcase" class="headerlink" title="str.swapcase()"></a>str.swapcase()</h3><p>功能：转换字符串中的小写字母为大写字母,大写字母为小写字母，生成一个新的字符串。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; str5 = <span class="string">"SDR dsad Sfds"</span></span><br><span class="line">&gt;&gt;&gt; str5.swapcase()</span><br><span class="line"><span class="string">'sdr DSAD sFDS'</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="str-capitalize"><a href="#str-capitalize" class="headerlink" title="str.capitalize()"></a>str.capitalize()</h3><p>功能：转换字符串中的首个字符的首字母为大写字母其他字符均为小写字母，生成一个新的字符串。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; str7 = <span class="string">"SDR dsad Sfds"</span></span><br><span class="line">&gt;&gt;&gt; str7.capitalize()</span><br><span class="line"><span class="string">'Sdr dsad sfds'</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="str-title"><a href="#str-title" class="headerlink" title="str.title()"></a>str.title()</h3><p>功能：转换字符串中每个单词的首字母大写，生成一个新的字符串。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; str9 = <span class="string">"SDR dsad Sfds"</span></span><br><span class="line">&gt;&gt;&gt; str9.title()</span><br><span class="line"><span class="string">'Sdr Dsad Sfds'</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="str-count-“指定字符”-start-end"><a href="#str-count-“指定字符”-start-end" class="headerlink" title="str.count(“指定字符”[,start][,end])"></a>str.count(“指定字符”[,start][,end])</h3><p>功能：查找字符串str中指定字符串出现的次数。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; str11 = <span class="string">"tom is a very very good man!"</span></span><br><span class="line">&gt;&gt;&gt; str11.count(<span class="string">"very"</span>)</span><br><span class="line">2</span><br></pre></td></tr></table></figure></p>
+<h3 id="str-fand-“指定字符”-start-end"><a href="#str-fand-“指定字符”-start-end" class="headerlink" title="str.fand(“指定字符”[,start][,end])"></a>str.fand(“指定字符”[,start][,end])</h3><p>功能：查找字符串str中指定字符串第一次出现的下标<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; str11.find(<span class="string">'is'</span>)</span><br><span class="line">4</span><br></pre></td></tr></table></figure></p>
+<h3 id="str-strip"><a href="#str-strip" class="headerlink" title="str.strip()"></a>str.strip()</h3><p>功能：截掉左右侧指定的字符，默认的字符是空格.<br>注意：str.lstrip()截掉左侧指定字符；str.rstrip()截掉右侧指定字符。都是生成新的字符串。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; str12 = <span class="string">"     dasc asdsa asdas   "</span></span><br><span class="line">&gt;&gt;&gt; str12.strip()</span><br><span class="line"><span class="string">'dasc asdsa asdas'</span></span><br><span class="line">&gt;&gt;&gt; str12.lstrip()</span><br><span class="line"><span class="string">'dasc asdsa asdas   '</span></span><br><span class="line">&gt;&gt;&gt; str12.rstrip()</span><br><span class="line"><span class="string">'     dasc asdsa asdas'</span></span><br></pre></td></tr></table></figure>
+<h3 id="str-split-指定字符-拆分字符串"><a href="#str-split-指定字符-拆分字符串" class="headerlink" title="str.split(指定字符) 拆分字符串"></a>str.split(指定字符) 拆分字符串</h3><p>功能：按照指定字符拆分字符串，生成一个列表。默认字符为空格。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; str4 = <span class="string">"acd sdsf sds sadsa"</span></span><br><span class="line">&gt;&gt;&gt; str4.split()</span><br><span class="line">[<span class="string">'acd'</span>, <span class="string">'sdsf'</span>, <span class="string">'sds'</span>, <span class="string">'sadsa'</span>]</span><br></pre></td></tr></table></figure></p>
+<h3 id="str-replace-old-new-max-替换函数"><a href="#str-replace-old-new-max-替换函数" class="headerlink" title="str.replace(old,new[,max])替换函数"></a>str.replace(old,new[,max])替换函数</h3><p>功能：将字符串中旧字符串old替换为新的字符串new，最大替换次数max。生成新的字符串。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; str6 = <span class="string">"tom is very very very nice man!"</span></span><br><span class="line">&gt;&gt;&gt; str6.replace(<span class="string">'very'</span>,<span class="string">'good'</span>,2)</span><br><span class="line"><span class="string">'tom is good good very nice man!'</span></span><br></pre></td></tr></table></figure></p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/07/16/python_字符串的处理/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/14/list_函数/" class="archive-article-date">
-  	<time datetime="2018-07-14T09:22:03.293Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-14</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/07/14/list_函数/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">python list的函数</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/14/list_函数/">python list的函数</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/14/list的增删改/" class="archive-article-date">
-  	<time datetime="2018-07-14T08:37:22.951Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/14/list的增删改/">Python list中元素的操作</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/14/list_列表/" class="archive-article-date">
-  	<time datetime="2018-07-14T08:37:18.309Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/14/list_列表/">python list的创建</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/14/python_if的用法/" class="archive-article-date">
-  	<time datetime="2018-07-14T08:37:10.353Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/14/python_if的用法/">Python if语句的用法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/12/python_循环控制语句/" class="archive-article-date">
-  	<time datetime="2018-07-12T13:13:25.240Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/12/python_循环控制语句/">Python 循环控制语句</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/10/hello-world/" class="archive-article-date">
-  	<time datetime="2018-07-10T13:10:55.565Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/10/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -383,8 +344,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
