@@ -158,6 +158,156 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-迭代器与生成器" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/19/迭代器与生成器/">python 迭代器与生成器</a>
+    </h1>
+  
+
+        
+        <a href="/2018/07/19/迭代器与生成器/" class="archive-article-date">
+  	<time datetime="2018-07-19T13:27:54.459Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-19</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="可迭代化（iterable）："><a href="#可迭代化（iterable）：" class="headerlink" title="可迭代化（iterable）："></a>可迭代化（iterable）：</h2><p>表明相关的对象可以创建迭代器对象，同时他们自身都是可以进行for数据遍历的。我们可以使用isinstance()来判断对象是否为可迭代化<br>from collections import Iterable<br>string = ‘hello’<br>print(isinstance(string, Iterable))  =&gt; True<br>函数格式：isinstance(对象，类型)<br>返回值：布尔值<br>结果：如果指定的对象属于指定的类型，那么返回True，反之返回False</p>
+<h2 id="迭代器（Iterator）"><a href="#迭代器（Iterator）" class="headerlink" title="迭代器（Iterator）"></a>迭代器（Iterator）</h2><p>1）概念：迭代器访问元素，是从第一个元素开始，依次访问后续元素直到结束。其中迭代器只能向前不能回退。其包含两个方法iter()和next()。<br>iter()用来创建一个迭代器，next()用来访问下一个元素。<br>迭代器两个步骤：<br>1、当调用next()函数，会将迭代器当前位置状态进行改变<br>2、会将下一个元素进行返回<br>例如：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; li = [1,2,3,4,5,6]</span><br><span class="line">&gt;&gt;&gt; lis = iter(li)</span><br><span class="line">&gt;&gt;&gt; next(lis)</span><br><span class="line">1</span><br><span class="line">&gt;&gt;&gt; next(lis)</span><br><span class="line">2</span><br></pre></td></tr></table></figure></p>
+<p>迭代器的延迟作用：迭代器生成的元素并不是在迭代器声明时，就准备好了的。通常时在调用迭代器需要提供该元素时生成的，也就是说只有在我们需要的时候迭代器才产生相关元素，不需要时并不会主动的生成相关元素。我们可以把迭代器看成一个容器，到我们需要时使用next()方法返回容器中的下一个值。</p>
+<h2 id="生成器"><a href="#生成器" class="headerlink" title="生成器"></a>生成器</h2><p>1、创建方式<br>第一种，使用列表推导式，将[]改为()，生成一个generator对象<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; (x <span class="keyword">for</span> x <span class="keyword">in</span> range(10))</span><br><span class="line">&lt;generator object &lt;genexpr&gt; at 0x035588A0&gt;</span><br></pre></td></tr></table></figure></p>
+<p>第二种，使用函数方式，采用yield关键字来实现<br>2、使用<br>生成器我们通常可以认为一种特殊的迭代器，但是它不需要像迭代器一样去实现<strong>iter</strong>,<strong>next</strong>方法。只需要使用yield关键字，该关键字可以在每次调用生成器函数时起到暂停作用，并将其值进行返回。同时还会记录当前运行值的状态。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; def gene():</span><br><span class="line">	no = 1</span><br><span class="line">	<span class="keyword">while</span> True:</span><br><span class="line">		yield no</span><br><span class="line">		no += 1</span><br><span class="line"></span><br><span class="line">		</span><br><span class="line">&gt;&gt;&gt; f = gene()</span><br><span class="line">&gt;&gt;&gt; next(f)</span><br><span class="line">1</span><br><span class="line">&gt;&gt;&gt; next(f)</span><br><span class="line">2</span><br><span class="line">&gt;&gt;&gt; next(f)</span><br><span class="line">3</span><br></pre></td></tr></table></figure></p>
+<p>总结：迭代器和生成器<br>1、容器是一系列的元素集合，str、list、set、dict对象都可以看作是容器，容器都可以进行迭代（即用在while或for循环），凡是这样的容器我们都称为可迭代化对象（Iterable）。<br>2、可迭代化对象都实现了<strong>iter</strong>方法，该方法返回一个迭代器对象。<br>3、迭代器都拥有一个状态字段，用于记录下次迭代返回值。它实现了<strong>next</strong>和<strong>iter</strong>方法，迭代器不会一次性把所有的元素都加载到内存中，而是在需要的时候才生成返回结果。<br>4、生成器是一种特殊的迭代器，它的返回值不是通过return来返回的，而是通过yield来返回的。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/19/迭代器与生成器/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-python_set集合" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/19/python_set集合/">python 集合数据类型 set</a>
+    </h1>
+  
+
+        
+        <a href="/2018/07/19/python_set集合/" class="archive-article-date">
+  	<time datetime="2018-07-19T12:50:18.458Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-19</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="集合的概念"><a href="#集合的概念" class="headerlink" title="集合的概念"></a>集合的概念</h2><p>集合set是一个无序的数据集合，可以存储各种数据类型的元素，同时可以对集合中的元素进行新增、删除等操作，因此集合的长度是可变的。并且集合是不允许有重复元素，如果出现重复元素，除去第一个元素之外，都会被集合所忽略<br>注意：set是无序的，即存储元素到set的顺序与这些元素输出的顺序无关。set仍然是采用哈希算法，对这些元素进行存储的。</p>
+<h2 id="集合的声明与赋值"><a href="#集合的声明与赋值" class="headerlink" title="集合的声明与赋值"></a>集合的声明与赋值</h2><p>1）set1 = {1,2,3}   生成一个集合<br>2）set1 = set({1,2,3})<br>3)set1 = set()  生成一个空集合，请注意集合只能通过set()函数来生成空集合，而不是通过set1 = {},这个表达式会生成一个空字典。</p>
+<h2 id="数据类型转换"><a href="#数据类型转换" class="headerlink" title="数据类型转换"></a>数据类型转换</h2><h3 id="字符串转成集合"><a href="#字符串转成集合" class="headerlink" title="字符串转成集合"></a>字符串转成集合</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; str1 = <span class="string">'hello'</span></span><br><span class="line">&gt;&gt;&gt; <span class="built_in">set</span>(str1)</span><br><span class="line">&#123;<span class="string">'e'</span>, <span class="string">'l'</span>, <span class="string">'h'</span>, <span class="string">'o'</span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="列表转成集合"><a href="#列表转成集合" class="headerlink" title="列表转成集合"></a>列表转成集合</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; li = [1,2,3,4,5]</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">set</span>(li)</span><br><span class="line">&#123;1, 2, 3, 4, 5&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="元组转集合"><a href="#元组转集合" class="headerlink" title="元组转集合"></a>元组转集合</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; tu = (1,2,3,4)</span><br><span class="line">&gt;&gt;&gt; <span class="built_in">set</span>(tu)</span><br><span class="line">&#123;1, 2, 3, 4&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="集合的操作"><a href="#集合的操作" class="headerlink" title="集合的操作"></a>集合的操作</h2><h3 id="元素的增加-add-无返回值"><a href="#元素的增加-add-无返回值" class="headerlink" title="元素的增加 add() 无返回值"></a>元素的增加 add() 无返回值</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; set1 = &#123;1,2,3,4&#125;</span><br><span class="line">&gt;&gt;&gt; set1.add(5)</span><br><span class="line">&gt;&gt;&gt; set1</span><br><span class="line">&#123;1, 2, 3, 4, 5&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="元素的删除"><a href="#元素的删除" class="headerlink" title="元素的删除"></a>元素的删除</h3><p>第一 set.remove(元素) 无返回值<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; set1.remove(5)</span><br><span class="line">&gt;&gt;&gt; set1</span><br><span class="line">&#123;1, 2, 3, 4&#125;</span><br></pre></td></tr></table></figure></p>
+<p>第二 set.discard(元素) 无返回值<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ &#123;1, 2, 3, 4&#125;</span><br><span class="line">&gt;&gt;&gt; set1.discard(4)</span><br><span class="line">&gt;&gt;&gt; set1</span><br><span class="line">&#123;1, 2, 3&#125;</span><br></pre></td></tr></table></figure></p>
+<p>注意：上面两个方法，如果删除一个不存在的元素，其中remove()会报错，而discar()无反应<br>第三 set.clear() 清空集合中所有的元素   无返回值<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; set1.clear()</span><br><span class="line">&gt;&gt;&gt; set1</span><br><span class="line"><span class="built_in">set</span>()</span><br></pre></td></tr></table></figure></p>
+<p>第四、del命令 删除集合，并释放其所占内存资源<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">set</span>()</span><br><span class="line">&gt;&gt;&gt; del set1</span><br><span class="line">&gt;&gt;&gt; set1</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"&lt;pyshell#16&gt;"</span>, line 1, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    set1</span><br><span class="line">NameError: name <span class="string">'set1'</span> is not defined</span><br></pre></td></tr></table></figure></p>
+<h2 id="集合运算"><a href="#集合运算" class="headerlink" title="集合运算"></a>集合运算</h2><h3 id="并集运算-或union"><a href="#并集运算-或union" class="headerlink" title="并集运算 (|)或union()"></a>并集运算 (|)或union()</h3><p>两个集合进行并集运算，即将两个集合中的元素都合并到一个新的集合中，重复的元素只出现一次。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; set1 = &#123;1,2,3&#125;</span><br><span class="line">&gt;&gt;&gt; set2 = &#123;3,4,5&#125;</span><br><span class="line">&gt;&gt;&gt; set1 | set2</span><br><span class="line">&#123;1, 2, 3, 4, 5&#125;</span><br><span class="line">&gt;&gt;&gt; set1.union(set2)</span><br><span class="line">&#123;1, 2, 3, 4, 5&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="交集运算-（-amp-）或intersection"><a href="#交集运算-（-amp-）或intersection" class="headerlink" title="交集运算 （&amp;）或intersection()"></a>交集运算 （&amp;）或intersection()</h3><p>两个集合进行交集运算，即将两个集合中相同的元素合并到一个新的集合中。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; set1 &amp; set2</span><br><span class="line">&#123;3&#125;</span><br><span class="line">&gt;&gt;&gt; set1.intersection(set2)</span><br><span class="line">&#123;3&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="差集运算（-）或difference"><a href="#差集运算（-）或difference" class="headerlink" title="差集运算（-）或difference()"></a>差集运算（-）或difference()</h3><p>两个集合进行差集运算，即运算符左边的集合，与运算右边的集合进行差运算，相当于使用左边集合去除与右边集合相同的元素。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; set1 - set2</span><br><span class="line">&#123;1, 2&#125;</span><br><span class="line">&gt;&gt;&gt; set2 - set1</span><br><span class="line">&#123;4, 5&#125;</span><br><span class="line">&gt;&gt;&gt; set1.difference(set2)</span><br><span class="line">&#123;1, 2&#125;</span><br><span class="line">&gt;&gt;&gt; set2.difference(set1)</span><br><span class="line">&#123;4, 5&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="对称差运算（-）或者symmetric-difference"><a href="#对称差运算（-）或者symmetric-difference" class="headerlink" title="对称差运算（^）或者symmetric_difference()"></a>对称差运算（^）或者symmetric_difference()</h3><p>两个集合进行对称差运算，即两个集合中除去相同元素，其他所有元素重新归并到一个新集合中。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; set1 ^ set2</span><br><span class="line">&#123;1, 2, 4, 5&#125;</span><br><span class="line">&gt;&gt;&gt; set1.symmetric_difference(set2)</span><br><span class="line">&#123;1, 2, 4, 5&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="子集与超集（父集）"><a href="#子集与超集（父集）" class="headerlink" title="子集与超集（父集）"></a>子集与超集（父集）</h2><p>set1 =&gt; {‘zh’, ‘tw’, ‘en’}<br>subset =&gt; {‘zh’, ‘tw’}<br>我们通过观察可以看到，subset中的内容，属于set1的一部分。因此，<br>subset.issubset(set1) =&gt; True<br>表示，subset是set1集合的一个子集合<br>同理，我们也可以说，set1是subset的父集合<br>set1.issuperset(subset) =&gt; True</p>
+<h2 id="集合常用函数"><a href="#集合常用函数" class="headerlink" title="集合常用函数"></a>集合常用函数</h2><h3 id="set-update"><a href="#set-update" class="headerlink" title="set.update()"></a>set.update()</h3><p>结果：我们将set2中的元素，添加到set1中，如果有相同的元素只保留一个。同时，该操作会修改set1的元素数量。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; set1 = &#123;4,5,6&#125;</span><br><span class="line">&gt;&gt;&gt; set2 = &#123;3,4,5&#125;</span><br><span class="line">&gt;&gt;&gt; set1.update(set2)</span><br><span class="line">&gt;&gt;&gt; set1</span><br><span class="line">&#123;3, 4, 5, 6&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="set-intersection-update"><a href="#set-intersection-update" class="headerlink" title="set.intersection_update()"></a>set.intersection_update()</h3><p>结果：我们使用set2中的元素，添加到set1中，其中，保留两个集合中相同的元素。其中，set1、set2中其他的元素被舍弃。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; set1.intersection_update(set2)</span><br><span class="line">&gt;&gt;&gt; set1</span><br><span class="line">&#123;3, 4, 5&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="set-symmetric-difference-update"><a href="#set-symmetric-difference-update" class="headerlink" title="set.symmetric_difference_update()"></a>set.symmetric_difference_update()</h3><p>结果：我们使用set1与set2进行运算，只保留两者除去相同元素之外的元素。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; set1 = &#123;1,2,3&#125;</span><br><span class="line">&gt;&gt;&gt; set2 = &#123;2,3,4&#125;</span><br><span class="line">&gt;&gt;&gt; set1.symmetric_difference_update(set2)</span><br><span class="line">&gt;&gt;&gt; set1</span><br><span class="line">&#123;1, 4&#125;</span><br></pre></td></tr></table></figure></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/19/python_set集合/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-python_字典" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -732,77 +882,10 @@
 
 
   
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/10/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/10/hello-world/" class="archive-article-date">
-  	<time datetime="2018-07-10T13:10:55.565Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/10/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 
 
