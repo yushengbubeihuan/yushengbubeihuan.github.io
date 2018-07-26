@@ -158,6 +158,146 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-python_局部变量和全局变量" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/26/python_局部变量和全局变量/">局部变量和全局变量</a>
+    </h1>
+  
+
+        
+        <a href="/2018/07/26/python_局部变量和全局变量/" class="archive-article-date">
+  	<time datetime="2018-07-26T12:11:03.297Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<p>1）Python中，函数在调用的时候Python才会给函数一个内存地址，用来执行函数内部的相关代码。<br>2)Python程序在运行时，首先会将程序最外部的变量载入内容，并给其分配相关的内存空间。我们成这种变量为全局变量。<br>3）函数中声明的变量，只有在函数被执行时，才会被分配内存空间进行执行。我们成这种变量为局部变量。<br>4）Python程序执行的过程中，执行函数时首先会检查其函数内部的局部变量是否存在，如果存在就调用它，如果不存在就从外部全局变量中进行调用，如果仍然没有发现相关内容，则报错。<br>5）当函数中出现嵌套情况时，最内层函数执行调用变量，会采用“就近原则”即先查找自身范围内的变量，如果没有找到，则向上查找，直到程序最外部结束。</p>
+<h3 id="6）globals-与locals"><a href="#6）globals-与locals" class="headerlink" title="6）globals()与locals()"></a>6）globals()与locals()</h3><p>在Python中，通过globals()观察全局作用域中内容，包括：内置函数、自定义函数、全局变量；通过locals()观察局部作用域中的内容，包括：局部变量，嵌套函数（内部函数）inner </p>
+<h3 id="global与nonlocal"><a href="#global与nonlocal" class="headerlink" title="global与nonlocal"></a>global与nonlocal</h3><p>global用来修饰局部变量时，表示该变量将作为全局变量来使用。即不仅在函数中可以被调用，同时在文件最外部也可以被调用。<br>nonlocal用来修饰嵌套函数内部的变量，对父级作用域（外层函数）中的变量进行引用和修改，那么从该层(包括父级)以下都将调用该变量的值。注意，该关键字只能影响其直接父级函数。<br>使用global关键字修饰的变量之前可以并不存在<br>而使用nonlocal关键字修饰的变量在嵌套作用域中必须已经存在。</p>
+<p>###总结：</p>
+<p>在函数中定义的变量，我们成为局部变量。包括在函数内部定义的变量、作为参数传递进来的变量。局部变量起作用的范围，我们称为局部作用域。因为Python在调用局部变量时，需要给它分配内存地址，我们称为这个地址为局部命名空间。<br>在文件最外层定义的变量，我们成为全局变量，可以在文件中的任意位置进行调用。全局变量起作用的范围，我们称为全局作用域。Python在载入文件时，就需要给全局变量分配内存地址，这个地址我们称为全局命名空间。</p>
+<h3 id="Python运行时处理变量的步骤："><a href="#Python运行时处理变量的步骤：" class="headerlink" title="Python运行时处理变量的步骤："></a>Python运行时处理变量的步骤：</h3><p>1、从Python解释器开始执行之后，就在内存中开辟里一个空间，每当遇到一个变量的时候，就把变量名和值之间对应的关系记录下来，但是当遇到函数定义的时候，解释器只是象征性的将函数名读入内存，表示知道这个函数存在了，至于函数内部的变量和逻辑，解释器根本不关心。<br>2、函数执行时，函数中的变量会储存在新开辟出来的内存中，函数中的变量只能在函数内部使用，并且会随着函数执行完毕，这块内存中的所有内容也会被清空</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/26/python_局部变量和全局变量/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-python_闭包" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/26/python_闭包/">闭包</a>
+    </h1>
+  
+
+        
+        <a href="/2018/07/26/python_闭包/" class="archive-article-date">
+  	<time datetime="2018-07-26T12:10:58.701Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$</span><br></pre></td></tr></table></figure>
+<h3 id="闭包格式"><a href="#闭包格式" class="headerlink" title="闭包格式"></a>闭包格式</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; def outer():</span><br><span class="line">	<span class="built_in">print</span>(<span class="string">'我是外部函数'</span>)</span><br><span class="line">	def inner():</span><br><span class="line">		<span class="built_in">print</span>(<span class="string">'我是闭包函数'</span>)</span><br><span class="line">	<span class="built_in">return</span> inner</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt; f = outer()</span><br><span class="line">我是外部函数</span><br><span class="line">&gt;&gt;&gt; f()</span><br><span class="line">我是闭包函数</span><br></pre></td></tr></table></figure>
+<p>通过对例子的观察，我们发现闭包函数的写法有如下特点：<br>1、闭包函数作为内部函数，嵌套在外部函数中<br>2、闭包函数会作为外部函数的返回值，进行返回。返回闭包函数时，只返回函数名，不带括号。<br>3、外部调用时，首先要执行外部函数，然后将结果赋值给一个变量，此时该变量对应了闭包函数。<br>4、我们可以通过<strong>closure</strong>内部函数可以观察到，闭包函数的存在。前提是，闭包函数要与外部函数进行数据传递或调用。<br>总结：闭包使用的数据，必须是本身定义或外部函数中定义的相关变量，通常需要调用外部函数的数据，形成一个封闭的函数结构。不能与外部数据（全局变量）发生交流。</p>
+<h3 id="闭包的应用—装饰器"><a href="#闭包的应用—装饰器" class="headerlink" title="闭包的应用—装饰器"></a>闭包的应用—装饰器</h3><p>1、概念：装饰器本身仍然是一个函数。是我们队闭包应用的一种具体实现。<br>2、作用：装饰器可以在不改变函数本身功能的情况下，为函数添加额外的功能。诸如：日志、测试、性能检测等。装饰器同样也是返回一个函数对象。<br>3、用法：<br>1）、普通用法：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$ def outner(f):</span><br><span class="line">    def inner():</span><br><span class="line">        f()</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">'word!'</span>)</span><br><span class="line">    <span class="built_in">return</span> inner</span><br><span class="line">def func():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'hello'</span>)</span><br><span class="line">f = outner(func)</span><br><span class="line">f()</span><br><span class="line"></span><br><span class="line">运行结果：</span><br><span class="line">hello</span><br><span class="line">word!</span><br></pre></td></tr></table></figure></p>
+<p>2）、语法糖</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">$ def outner(f):</span><br><span class="line">    def inner(x):</span><br><span class="line">        <span class="keyword">if</span> f(x):</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">'x == 1'</span>)</span><br><span class="line">    <span class="built_in">return</span> inner</span><br><span class="line">@outner   <span class="comment">#用@+装饰器函数名   放在需要修饰的函数前</span></span><br><span class="line">def func(x):</span><br><span class="line">    <span class="keyword">if</span> x == 1:</span><br><span class="line">        flag = True</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        flag = False</span><br><span class="line">    <span class="built_in">return</span> flag</span><br><span class="line">func(1)</span><br><span class="line"></span><br><span class="line">运行结果：</span><br><span class="line">x == 1</span><br></pre></td></tr></table></figure>
+<p>语法糖的副作用：<br>我们来看一下func()的返回值。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">def outner(f):</span><br><span class="line">    def inner(x):</span><br><span class="line">        <span class="keyword">if</span> f(x):</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">'x == 1'</span>)</span><br><span class="line">    <span class="built_in">return</span> inner</span><br><span class="line">@outner</span><br><span class="line">def func(x):</span><br><span class="line">    <span class="keyword">if</span> x == 1:</span><br><span class="line">        flag = True</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        flag = False</span><br><span class="line">    <span class="built_in">return</span> flag</span><br><span class="line"><span class="built_in">print</span>(func(1))</span><br><span class="line">运行结果：</span><br><span class="line">x == 1</span><br><span class="line">None</span><br></pre></td></tr></table></figure></p>
+<p>我们可以发现，经过语法糖修饰后的函数func()的返回值为None，这是因为程序运行时语法糖将func(x)替换成了f(x),但仍然使用的是函数func()中的代码。所以返回值在闭包中的f(x)。如果要使用func()返回值进行运算就会失败。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/26/python_闭包/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-自定义函数" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -715,142 +855,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/07/14/list的增删改/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-list_列表" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/14/list_列表/">python list的创建</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/14/list_列表/" class="archive-article-date">
-  	<time datetime="2018-07-14T08:37:18.309Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="list-列表"><a href="#list-列表" class="headerlink" title="list-列表"></a>list-列表</h2><p>概念：List数据，首先它可以存储各种数据类型，比如：数值、字符串、布尔型等等；其次，列表中的元素可以随时进行删除、修改、增加，其长度随之变化；同时，列表也是有序的，我们同样可以使用循环对其进行遍历。</p>
-<h2 id="列表的声明与赋值"><a href="#列表的声明与赋值" class="headerlink" title="列表的声明与赋值"></a>列表的声明与赋值</h2><h3 id="1、声明列表同时进行赋值"><a href="#1、声明列表同时进行赋值" class="headerlink" title="1、声明列表同时进行赋值"></a>1、声明列表同时进行赋值</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; list1 = [1,2,3,<span class="string">'four'</span>,True]</span><br><span class="line">&gt;&gt;&gt; list1</span><br><span class="line">[1, 2, 3, <span class="string">'four'</span>, True]</span><br></pre></td></tr></table></figure>
-<h3 id="2、声明一个空列表，后续进行添加元素"><a href="#2、声明一个空列表，后续进行添加元素" class="headerlink" title="2、声明一个空列表，后续进行添加元素"></a>2、声明一个空列表，后续进行添加元素</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ list1 = list()   此时，python会生成一个空列表,即：[]</span><br><span class="line">注意，生成的这个空列表中没有任何值，它的长度为0</span><br></pre></td></tr></table></figure>
-<h3 id="3、嵌套列表"><a href="#3、嵌套列表" class="headerlink" title="3、嵌套列表"></a>3、嵌套列表</h3><p>使用嵌套列表即在列表里创建其它列表，例如：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; list2 = [[1,2],[3,4],[5,[6,7]]]</span><br><span class="line">&gt;&gt;&gt; list2</span><br><span class="line">[[1, 2], [3, 4], [5, [6, 7]]]</span><br></pre></td></tr></table></figure></p>
-<h3 id="4、访问列表中的数据"><a href="#4、访问列表中的数据" class="headerlink" title="4、访问列表中的数据"></a>4、访问列表中的数据</h3><p>根据元素的下标返回对应的元素<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; list3 = [1,2,3,4,5,6]</span><br><span class="line">&gt;&gt;&gt; list3[4]</span><br><span class="line">5</span><br></pre></td></tr></table></figure></p>
-<p>根据元素检索元素在列表中的位置<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; list3.index(4)</span><br><span class="line">3</span><br></pre></td></tr></table></figure></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/14/list_列表/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-python_if的用法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/14/python_if的用法/">Python if语句的用法</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/14/python_if的用法/" class="archive-article-date">
-  	<time datetime="2018-07-14T08:37:10.353Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h3 id="单判断"><a href="#单判断" class="headerlink" title="单判断"></a>单判断</h3><p>格式如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">if</span> 条件:</span><br><span class="line">      语句1</span><br></pre></td></tr></table></figure></p>
-<h3 id="双分支"><a href="#双分支" class="headerlink" title="双分支"></a>双分支</h3><p>格式如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">if</span> 条件:</span><br><span class="line">      语句1</span><br><span class="line">  <span class="keyword">else</span>:</span><br><span class="line">      语句2</span><br></pre></td></tr></table></figure></p>
-<h3 id="多分支"><a href="#多分支" class="headerlink" title="多分支"></a>多分支</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">if</span> 条件1:</span><br><span class="line">      语句1</span><br><span class="line">  <span class="keyword">elif</span> 条件2:</span><br><span class="line">      语句2</span><br><span class="line">  <span class="keyword">elif</span> 条件3:</span><br><span class="line">      语句3</span><br><span class="line">  ......</span><br><span class="line">  <span class="keyword">elif</span> 条件n:</span><br><span class="line">      语句n</span><br><span class="line">  <span class="keyword">else</span>:</span><br><span class="line">      语句e</span><br></pre></td></tr></table></figure>
-<h3 id="if语句的作用"><a href="#if语句的作用" class="headerlink" title="if语句的作用"></a>if语句的作用</h3><p>条件语句if，判断条件的真假选择要执行的语句。判断语句的结果为布尔类型，通常还会使用逻辑运算符： and、or、not<br>and:左右两端都是布尔型，其结果也为布尔型。当左右两端的值都为True，其结果才为True，有一方为False，其结果一定为False。<br>or:左右两端都是布尔型，其结果也为布尔型。当左右两端的值有一方为True时，其结果就为True，只有在双方都为False时，其结果才为False。<br>not：属于单目运算，其结果也是布尔型。其作用就是求反，如果变量为True，结果为False，如果为False，其结果为True。<br>逻辑运算、比较运算常用在条件中使用。同时，这两种运算符经常配合使用。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/14/python_if的用法/">展开全文 >></a>
         </p>
       
 
