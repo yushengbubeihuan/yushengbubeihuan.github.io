@@ -158,6 +158,151 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-list_函数" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/14/list_函数/">python list的函数</a>
+    </h1>
+  
+
+        
+        <a href="/2018/07/14/list_函数/" class="archive-article-date">
+  	<time datetime="2018-07-14T09:22:03.293Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h3 id="clear"><a href="#clear" class="headerlink" title="clear()"></a>clear()</h3><p>将列表中的内容进行清空，原列表内容为空。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; list1 = [1,2,3,4,5,6]</span><br><span class="line">&gt;&gt;&gt; list1.clear()</span><br><span class="line">&gt;&gt;&gt; list1</span><br><span class="line">[]</span><br></pre></td></tr></table></figure></p>
+<h3 id="max-与min"><a href="#max-与min" class="headerlink" title="max()与min()"></a>max()与min()</h3><p>返回值：返回该列表中最大值或最小值。<br>注意：该函数在使用时，必须要求所统计的列表中元素的数据类型要一致。不支持多数据类型，数值型根据数值本身大小取值，字符串类型根据字母的ASCII码值取值，布尔值根据对应的1、0取值。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; list2 = [8,5,7,1,6,9]</span><br><span class="line">&gt;&gt;&gt; max(list2)</span><br><span class="line">9</span><br><span class="line">&gt;&gt;&gt; min(list2)</span><br><span class="line">1</span><br></pre></td></tr></table></figure></p>
+<h3 id="sum-求和函数"><a href="#sum-求和函数" class="headerlink" title="sum()求和函数"></a>sum()求和函数</h3><p>函数格式：sum(list)<br>返回值：将列表中所用的数值进行求和运算，返回结果。注意，该函数只能用于数值型列表。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; list3 = [1,6,7,5,9]</span><br><span class="line">&gt;&gt;&gt; sum(list3)</span><br><span class="line">28</span><br></pre></td></tr></table></figure></p>
+<h3 id="sort-排序"><a href="#sort-排序" class="headerlink" title="sort()排序"></a>sort()排序</h3><p>函数格式：list.sort()、list.sort(reverse=True)<br>返回值：默认情况下，将原列表中元素按照升序进行排序,如果设置了反转参数为True，那么将原列表中的元素按照降序排列。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; list4 = [5,2,8,3,9,4]</span><br><span class="line">&gt;&gt;&gt; list4.sort()</span><br><span class="line">&gt;&gt;&gt; list4</span><br><span class="line">[2, 3, 4, 5, 8, 9]</span><br><span class="line">&gt;&gt;&gt; list4.sort(reverse = True)</span><br><span class="line">&gt;&gt;&gt; list4</span><br><span class="line">[9, 8, 5, 4, 3, 2]</span><br></pre></td></tr></table></figure></p>
+<h3 id="sorted-排序"><a href="#sorted-排序" class="headerlink" title="sorted()排序"></a>sorted()排序</h3><p>函数格式：sorted(list)、sorted(list,reverse=True)<br>返回值：默认情况下，将原列表中元素按照升序进行排序,如果设置了反转参数为True，那么将原列表中的元素按照降序排列。<br>注意：上面两种排序函数，其中第一个属于列表自身的排序方法，而第二种属于python内置的排序方法，也就是说第二种可以应用在包括列表在内多种集合排序。</p>
+<h3 id="set-去除列表中重复的元素"><a href="#set-去除列表中重复的元素" class="headerlink" title="set() 去除列表中重复的元素"></a>set() 去除列表中重复的元素</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; list5 = [1,1,2,2,3,4,5,5]</span><br><span class="line">&gt;&gt;&gt; list5 = list(<span class="built_in">set</span>(list5))</span><br><span class="line">&gt;&gt;&gt; list5</span><br><span class="line">[1, 2, 3, 4, 5]</span><br></pre></td></tr></table></figure>
+<h3 id="count-计数函数"><a href="#count-计数函数" class="headerlink" title="count()计数函数"></a>count()计数函数</h3><p>函数格式：list.count(元素)<br>返回值：返回指定元素在列表中出现的次数<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; list6 = [1,1,2,2,3,4,5,5]</span><br><span class="line">&gt;&gt;&gt; list6.count(2)</span><br><span class="line">2</span><br></pre></td></tr></table></figure></p>
+<h3 id="常用数据类型的转换"><a href="#常用数据类型的转换" class="headerlink" title="常用数据类型的转换"></a>常用数据类型的转换</h3><p>字符串转为列表：list(str)<br>函数格式：list(str)<br>返回值：将指定的字符串，按照元素顺序逐一转为列表<br>string1 = ‘hello world’<br>list1 = list(string1)<br>拆分字符串：str.split(分隔符)<br>函数格式：str.split(分隔符)<br>返回值：将字符串，根据指定的分隔符，转换为列表<br>列表转为字符串：’分隔符’.join(list)<br>函数格式:’分隔符’.join(list)<br>返回值：将指定的列表中的元素，通过分隔符进行连接，转换为字符串</p>
+<h3 id="列表比较运算符操作"><a href="#列表比较运算符操作" class="headerlink" title="列表比较运算符操作"></a>列表比较运算符操作</h3><p>相当于列表使用普通的比较运算符<br>import operator<br>operator.ge()         大于等于   &gt;=<br>operator.gt()         大于       &gt;<br>operator.eq()       等于         ==<br>operator.ne()        不等于      !=<br>operator.le()           小于等于 &lt;=<br>operator.lt()          小于      &lt;<br>格式：operator.ge(列表1,列表2)<br>返回值：如果符合条件，返回True，反之，返回False</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/14/list_函数/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-list的增删改" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/14/list的增删改/">Python list中元素的操作</a>
+    </h1>
+  
+
+        
+        <a href="/2018/07/14/list的增删改/" class="archive-article-date">
+  	<time datetime="2018-07-14T08:37:22.951Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="增加元素"><a href="#增加元素" class="headerlink" title="增加元素"></a>增加元素</h2><h3 id="使用append-函数在列表尾部增加一个元素"><a href="#使用append-函数在列表尾部增加一个元素" class="headerlink" title="使用append()函数在列表尾部增加一个元素"></a>使用append()函数在列表尾部增加一个元素</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; list1 = [1,2,3,4,5,6]</span><br><span class="line">&gt;&gt;&gt; list1.append(7)</span><br><span class="line">&gt;&gt;&gt; list1</span><br><span class="line">[1, 2, 3, 4, 5, 6, 7]</span><br></pre></td></tr></table></figure>
+<h3 id="使用extend-函数，在列表尾部，追加一个子列表内容"><a href="#使用extend-函数，在列表尾部，追加一个子列表内容" class="headerlink" title="使用extend()函数，在列表尾部，追加一个子列表内容"></a>使用extend()函数，在列表尾部，追加一个子列表内容</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; list2 = [8,9]</span><br><span class="line">&gt;&gt;&gt; list1.extend(list2)</span><br><span class="line">&gt;&gt;&gt; list1</span><br><span class="line">[1, 2, 3, 4, 5, 6, 7, 8, 9]</span><br></pre></td></tr></table></figure>
+<h3 id="使用“-”运算符，连接两个列表，其结果会生成一个新的列表。同时原来两个列表不变。"><a href="#使用“-”运算符，连接两个列表，其结果会生成一个新的列表。同时原来两个列表不变。" class="headerlink" title="使用“+”运算符，连接两个列表，其结果会生成一个新的列表。同时原来两个列表不变。"></a>使用“+”运算符，连接两个列表，其结果会生成一个新的列表。同时原来两个列表不变。</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; list3 = [1,2,3]</span><br><span class="line">&gt;&gt;&gt; list4 = [4,5,6]</span><br><span class="line">&gt;&gt;&gt; list3 + list4</span><br><span class="line">[1, 2, 3, 4, 5, 6]</span><br><span class="line">&gt;&gt;&gt; list3</span><br><span class="line">[1, 2, 3]</span><br><span class="line">&gt;&gt;&gt; list4</span><br><span class="line">[4, 5, 6]</span><br></pre></td></tr></table></figure>
+<h3 id="使用insert-函数，对列表指定位置进行插入操作。"><a href="#使用insert-函数，对列表指定位置进行插入操作。" class="headerlink" title="使用insert()函数，对列表指定位置进行插入操作。"></a>使用insert()函数，对列表指定位置进行插入操作。</h3><p>函数格式：list.insert(idx，元素),其中：idx代表要插入的索引位。返回值：列表长度+1<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; list5 = [1,2,4,5,6]</span><br><span class="line">&gt;&gt;&gt; list5.insert(2,3)</span><br><span class="line">&gt;&gt;&gt; list5</span><br><span class="line">[1, 2, 3, 4, 5, 6]</span><br></pre></td></tr></table></figure></p>
+<p>注意：插入指定的索引位后，原索引位所在的元素下标+1我们在实际使用的时候，通常会利用append或extend来实现元素的追加，而少用insert进行元素的插入。因为在频繁的插入操作，需要耗费大量的内存来维护列表的索引关系。</p>
+<h2 id="删除元素"><a href="#删除元素" class="headerlink" title="删除元素"></a>删除元素</h2><h3 id="使用remove-函数移除列表中指定的元素"><a href="#使用remove-函数移除列表中指定的元素" class="headerlink" title="使用remove()函数移除列表中指定的元素"></a>使用remove()函数移除列表中指定的元素</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; list6 = [1,2,3,4,5,6]</span><br><span class="line">&gt;&gt;&gt; list6.remove(3)</span><br><span class="line">&gt;&gt;&gt; list6</span><br><span class="line">[1, 2, 4, 5, 6]</span><br></pre></td></tr></table></figure>
+<h3 id="使用pop-函数移除元素"><a href="#使用pop-函数移除元素" class="headerlink" title="使用pop()函数移除元素"></a>使用pop()函数移除元素</h3><p>1）、list.pop() 默认从列表的尾部移除一个元素。并且返回所移除的元素。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; list7 = [1,2,3,4,5,6]</span><br><span class="line">&gt;&gt;&gt; list7.pop()</span><br><span class="line">6</span><br><span class="line">&gt;&gt;&gt; list7</span><br><span class="line">[1, 2, 3, 4, 5]</span><br></pre></td></tr></table></figure></p>
+<p>2）、list.pop(idx) idx指定的下表索引位置。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; list7</span><br><span class="line">[1, 2, 3, 4, 5]</span><br><span class="line">&gt;&gt;&gt; list7.pop(3)</span><br><span class="line">4</span><br><span class="line">&gt;&gt;&gt; list7</span><br><span class="line">[1, 2, 3, 5]</span><br></pre></td></tr></table></figure></p>
+<h3 id="使用del删除指定的列表片段或列表本身"><a href="#使用del删除指定的列表片段或列表本身" class="headerlink" title="使用del删除指定的列表片段或列表本身"></a>使用del删除指定的列表片段或列表本身</h3><p>del list[idx]        删除指定索引位对应的元素<br>del list             删除整个列表，同时释放该列表所占用的内存空间<br>del list[star:end]   删除指定的列表片段</p>
+<h2 id="修改元素"><a href="#修改元素" class="headerlink" title="修改元素"></a>修改元素</h2><h3 id="通过索引位，找到指定的列表元素，重新对其进行赋值即可完成修改操作。"><a href="#通过索引位，找到指定的列表元素，重新对其进行赋值即可完成修改操作。" class="headerlink" title="通过索引位，找到指定的列表元素，重新对其进行赋值即可完成修改操作。"></a>通过索引位，找到指定的列表元素，重新对其进行赋值即可完成修改操作。</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ &gt;&gt;&gt; list8 = [1,2,3,4]</span><br><span class="line">&gt;&gt;&gt; list8[3] = 5</span><br><span class="line">&gt;&gt;&gt; list8</span><br><span class="line">[1, 2, 3, 5]</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/14/list的增删改/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-list_列表" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
